@@ -65,7 +65,7 @@ git push origin feature/your-feature-name
 - Click on "Create pull request."
 
 ## Authors
-- **David Muiga** 
+- **David Maigwa** 
 - **Shadrack Anyona** 
 - **Sharon Chang'ach**
 
