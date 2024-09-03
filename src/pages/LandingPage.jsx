@@ -4,8 +4,7 @@ function LandingPage() {
   return (
     <div>
     
-<Footer/>
-    
+
     </div>
   )
 }

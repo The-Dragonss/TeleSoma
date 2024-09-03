@@ -1,8 +1,14 @@
-
+import FooterVector from '../assets/FooterVector.svg'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <>
+    <img src={FooterVector} alt="" 
+    
+    className="mx-auto w-full"
+    />
+        <div></div>
+    </>
   )
 }
 
