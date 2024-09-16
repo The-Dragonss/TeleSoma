@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+/*This is the card container*/
 .features-container {
   display: flexbox;
   flex-wrap: wrap;
