@@ -7,7 +7,6 @@ function LandingPage() {
     <div>
 
 
-
     </div>
   )
 }
