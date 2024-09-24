@@ -17,6 +17,9 @@ export default {
         background: "#FBF8F6",
         secondaryBackground: "#F3EBE5",
       },
+      height: {
+        920: "57.5rem",
+      },
     },
   },
   plugins: [],

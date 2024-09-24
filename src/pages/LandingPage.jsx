@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import HomePage from './HomePage'
 
 function LandingPage() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline text-primaryOrange">
-        Hello world!
-      </h1>
+
+      <HomePage />
     </div>
   )
 }
