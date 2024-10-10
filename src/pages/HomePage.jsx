@@ -1,11 +1,19 @@
 import React from 'react'
 import NavColumn from '../components/NavColumn'
-
+import FileUpload from '../components/FileUpload'
+import CourseDisplay from '../components/CourseDisplay'
+import Welcome from '../components/Welcome'
+import RightColum from '../components/RightColumn'
 
 const HomePage = () => {
     return (
-        <div className='bg-purple w-full h-screen flex flex-col justify-center mx-auto' >
-            < NavColumn />
+        <div className='  h-screen flex w-full justify-center ' >
+            <NavColumn />
+            <div className='flex flex-col justify-between'>
+                <Welcome />
+                <CourseDisplay />
+            </div>
+            <RightColum />
         </div>
     )
 }
