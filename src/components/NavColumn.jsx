@@ -14,7 +14,7 @@ const NavColumn = () => {
     return (
         <>
             {/* Navbar hidden by default on small screens */}
-            <div id="navbar" className="bg-secondaryBackground flex flex-col w-40 my-6 ml-6 rounded-3xl hidden sm:flex">
+            <div id="navbar" className="bg-secondaryBackground  flex-col w-60 my-6 ml-6 rounded-3xl hidden sm:flex">
                 <div className="mx-auto pt-4">Logo
                     <a href="#home" className="">
                         <img src={Home} alt="Home Icon" className="w-6 h-6" />
@@ -22,27 +22,27 @@ const NavColumn = () => {
                 </div>
 
                 <div className="flex flex-col my-auto mx-auto space-y-12">
-                    <div className="bg-white rounded-full h-14 w-14 hover:bg-primaryOrange relative">
+                    <div className="bg-white rounded-full h-16 w-16 hover:bg-primaryOrange relative">
                         <a href="#home" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            <img src={Home} alt="Home Icon" className="w-6 h-6" />
+                            <img src={Home} alt="Home Icon" className="w-10 h-10" />
                         </a>
                     </div>
 
-                    <div className="bg-white rounded-full h-14 w-14 hover:bg-primaryOrange relative">
+                    <div className="bg-white rounded-full h-16 w-16 hover:bg-primaryOrange relative">
                         <a href="#library" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            <img src={Library} alt="Library Icon" className="w-6 h-6" />
+                            <img src={Library} alt="Library Icon" className="w-10 h-10" />
                         </a>
                     </div>
 
-                    <div className="bg-white rounded-full h-14 w-14 hover:bg-primaryOrange relative">
+                    <div className="bg-white rounded-full h-16 w-16 hover:bg-primaryOrange relative">
                         <a href="#calendar" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            <img src={Calendar} alt="Calendar Icon" className="w-6 h-6" />
+                            <img src={Calendar} alt="Calendar Icon" className="w-10 h-10" />
                         </a>
                     </div>
 
-                    <div className="bg-white rounded-full h-14 w-14 hover:bg-primaryOrange relative">
+                    <div className="bg-white rounded-full h-16 w-16 hover:bg-primaryOrange relative">
                         <a href="#groups" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            <img src={Groups} alt="Groups Icon" className="w-6 h-6" />
+                            <img src={Groups} alt="Groups Icon" className="w-10 h-10" />
                         </a>
                     </div>
                 </div>
