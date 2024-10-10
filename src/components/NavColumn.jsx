@@ -6,22 +6,19 @@ import Groups from '../assets/Groups.svg';
 import Settings from '../assets/Settings.svg';
 
 const NavColumn = () => {
-    const toggleNavbar = () => {
-        const navbar = document.getElementById("navbar");
-        navbar.classList.toggle("hidden");
-    };
+
 
     return (
         <>
             {/* Navbar hidden by default on small screens */}
-            <div id="navbar" className="bg-secondaryBackground  flex-col w-60 my-6 ml-6 rounded-3xl hidden sm:flex">
-                <div className="mx-auto pt-4">Logo
+            <div id="navbar" className="bg-secondaryBackground flex flex-row max-sm:items-center max-sm:p-2 max-sm:fixed max-sm:bottom-0 max-sm:w-full sm:flex-col sm:w-60 sm:my-6 sm:ml-6 sm:rounded-3xl  sm:flex">
+                <div className="mx-auto pt-4 hidden sm:flex">Logo
                     <a href="#home" className="">
                         <img src={Home} alt="Home Icon" className="w-6 h-6" />
                     </a>
                 </div>
 
-                <div className="flex flex-col my-auto mx-auto space-y-12">
+                <div className="flex flex-row max-sm:gap-6  max-sm:mx-auto sm:flex-col sm:my-auto sm:mx-auto sm:space-y-12">
                     <div className="bg-white rounded-full h-16 w-16 hover:bg-primaryOrange relative">
                         <a href="#home" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             <img src={Home} alt="Home Icon" className="w-10 h-10" />
@@ -47,19 +44,14 @@ const NavColumn = () => {
                     </div>
                 </div>
 
-                <div className="mx-auto pb-4">
+                <div className="mx-auto pb-4 hidden sm:flex">
                     <a href="#settings" className="">
                         <img src={Settings} alt="Settings Icon" className="h-10 w-10" />
                     </a>
                 </div>
             </div>
 
-            {/* Toggle button visible only on small screens */}
-            <button className="absolute top-0 right-0 p-4 sm:hidden block" onClick={toggleNavbar}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5m-16.5 6.75h16.5m-16.5 6.75h16.5" />
-                </svg>
-            </button>
+
         </>
     );
 };

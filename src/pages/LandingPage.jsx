@@ -3,13 +3,14 @@ import React from 'react'
 import HomePage from './HomePage'
 import ChunkedNotesDisplay from './ChunkedNotesDisplay'
 
+
 function LandingPage() {
   return (
     <div>
-
-
-
       <ChunkedNotesDisplay />
+
+
+
     </div>
   )
 }
