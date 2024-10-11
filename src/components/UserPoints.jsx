@@ -47,7 +47,7 @@ const UserPoints = () => {
                     <h3 className="text-lg font-bold">Daily XP</h3>
                     <p className="text-xl">{dailyXP}</p>
                 </div>
-                <span class="block w-0.5 h-3/4 align-center bg-black"></span>
+                <span className="block w-0.5 h-3/4 align-center bg-black"></span>
 
                 {/* Total XP */}
                 <div className="flex flex-col items-center bg-white p-4 rounded-lg w-1/2 mx-2">

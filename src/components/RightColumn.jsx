@@ -42,7 +42,7 @@ const RightColumn = () => {
             <UserPoints />
             <div className='bg-background rounded-2xl p-6'>
                 <Streak />
-                <span class="flex flex-row h-0.5 w-full align-center bg-black m-2"></span>
+                <span className="flex flex-row h-0.5 w-full align-center bg-black m-2"></span>
                 <CompletedTracking />
             </div>
 
