@@ -2,12 +2,13 @@
 import React from 'react'
 import HomePage from './HomePage'
 import ChunkedNotesDisplay from './ChunkedNotesDisplay'
+import QuizPage from '../components/Quiz'
 
 
 function LandingPage() {
   return (
     <div>
-      <ChunkedNotesDisplay />
+      <QuizPage />
 
 
 
