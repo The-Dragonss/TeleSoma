@@ -3,6 +3,8 @@
 import Footer from '../components/Footer'
 import HowItWorks from '../components/HowItWorks'
 /* eslint-disable no-unused-vars */
+import React from "react";
+import Features from "../components/Features";
 import React from 'react'
 import HomePage from './HomePage'
 import ChunkedNotesDisplay from './ChunkedNotesDisplay'
@@ -18,6 +20,9 @@ import DashboardPage from './Dashboard'
 function LandingPage() {
   return (
     <div>
+      <h1 className="text-3xl font-bold underline text-primaryOrange">
+        Hello world!
+      </h1>
       <QuizPage />
 
 
@@ -32,7 +37,7 @@ function LandingPage() {
 
 
     </div>
-  )
+  );
 }
 
-export default LandingPage
+export default LandingPage;
