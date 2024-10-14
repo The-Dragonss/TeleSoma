@@ -1,3 +1,7 @@
+
+
+import Footer from '../components/Footer'
+import HowItWorks from '../components/HowItWorks'
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import HomePage from './HomePage'
@@ -9,6 +13,7 @@ import Sample from './Sample'
 import CoursePageBanner from './CourseBanner'
 import SignUpPage from './SignUp'
 import DashboardPage from './Dashboard'
+
 
 function LandingPage() {
   return (
