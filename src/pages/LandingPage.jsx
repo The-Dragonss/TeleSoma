@@ -18,6 +18,7 @@ function LandingPage() {
  {/* <Sample /> */}
 {/* <SignUpPage /> */}
 <DashboardPage />
+
     </div>
   )
 }
