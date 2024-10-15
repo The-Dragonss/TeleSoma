@@ -16,6 +16,7 @@ export default {
         secondaryOrange: "#F8B577",
         background: "#FBF8F6",
         secondaryBackground: "#F3EBE5",
+        modulecolor: "#9AB2BC",
       },
     },
   },
