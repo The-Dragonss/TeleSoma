@@ -37,29 +37,22 @@ const CourseDisplay = () => {
 
     const Avatars = [Avatar1, Avatar2, Avatar3, Avatar4];
 
-    {/* useEffect(() => {
-        const fetchCourses = async () => {
-            try {
-                const response = await fetch('/api/courses');
-                const data = await response.json();
-                setCourses(data);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching courses:', error);
-                setError(error.message);
-                setLoading(false);
-            }
-        };
-        fetchCourses();
-    }, []);
+    {/*const handleCourseClick = async (courseId) => {
+        setLoading(true);
+        try {
+            // fetching chunked notes based on course ID
+            const response = await fetch(`/api/courses/${courseId}/notes`);
+            const chunkedNotes = await response.json();  // Assume you get chunked notes as response
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
+            // Navigate to chunked notes display page with notes data
+            navigate('/chunkednotesdisplayPage', { state: { chunkedNotes } });
+        } catch (error) {
+            console.error('Error fetching course notes:', error);
+            setError('Failed to load course notes.');
+        } finally {
+            setLoading(false);
+        }
+    };
 */}
 
     // Using dummy data 
