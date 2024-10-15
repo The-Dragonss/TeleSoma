@@ -10,6 +10,8 @@ export default {
         black: "#09050E",
         primaryPink: "#F3C5C5",
         secondaryPink: "#EF98A1",
+        purple: "#D5D2FE",
+        green: "#BFF0DB",
         secondaryPurple: "#C38CF3",
         purple: "#D5D2FE",
         Green: "#BFF0DB",
