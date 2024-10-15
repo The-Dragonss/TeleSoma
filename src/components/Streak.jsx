@@ -1,8 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import Flame from '../assets/Flame.svg'
 
+// eslint-disable-next-line react/prop-types
 const Streak = ({ streakCount, lastActiveDate }) => {
     const [streak, setStreak] = useState(streakCount);
+    // eslint-disable-next-line no-unused-vars
     const [today, setToday] = useState(new Date().getDay()); // Get current day
 
     useEffect(() => {
@@ -23,25 +26,25 @@ const Streak = ({ streakCount, lastActiveDate }) => {
     }, [lastActiveDate]);
 
     return (
-        <div className="w-full my-4">
+        <div className="w-full my-2"> 
             {/* Daily Streak */}
-            <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-bold">Daily Streak</h3>
+            <div className="flex justify-between items-center mb-2"> 
+                <h3 className="text-sm font-bold">Daily Streak</h3> 
                 <div className="flex items-center">
-                    <img src={Flame} alt="Streak" className="w-6 h-6" />
-                    <span className="ml-2 text-lg">{streak}</span>
+                    <img src={Flame} alt="Streak" className="w-4 h-4" /> 
+                    <span className="ml-1 text-sm">{streak}</span> 
                 </div>
             </div>
 
             {/* Weekly Progress */}
-            <div className="flex justify-around mb-4">
+            <div className="flex justify-around mb-2">
                 {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day, index) => (
                     <div
                         key={index}
-                        className={`w-12 h-12 rounded-full border border-black flex items-center justify-center 
-                        ${today === index ? 'bg-pink-400' : 'bg-white'}`}
+                        className={`w-10 h-10 rounded-full border border-black flex items-center justify-center 
+                        ${today === index ? 'bg-pink-400' : 'bg-white'}`} 
                     >
-                        {day}
+                        <span className="text-xs">{day}</span> 
                     </div>
                 ))}
             </div>

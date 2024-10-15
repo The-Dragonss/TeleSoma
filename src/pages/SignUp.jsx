@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const SignUpPage = () => {
   const features = [
@@ -10,6 +12,19 @@ const SignUpPage = () => {
     "REMINDERS",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
+  const {signup} = useContext(AuthContext)
+
+  const [username, setUsername] = useState()
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    signup(username,email,password)
+    setPassword("")
+    setEmail("")
+    setUsername("")
+ }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,16 +39,11 @@ const SignUpPage = () => {
       <div className="w-1/2 p-12 m-12">
       <div className="flex flex-col items-center"> {/* Centering container */}
   <h1 className="text-3xl font-bold mb-6">Sign up to TeloSoma today</h1>
-  <button className="w-96 py-2 px-4 border border-gray-300 rounded-full mb-4 flex items-center justify-center">
-    <span className="mr-2">G</span>
-    Sign in with Google
-  </button>
-  <div className="text-center text-gray-500 mb-4">or</div>
 </div>
         <div className="flex justify-center h-screen">
           {" "}
           {/* Centering container */}
-          <form className="p-6 rounded-md">
+          <form className="p-6 rounded-md" onSubmit={handleSubmit}>
             {" "}
             {/* Added padding and shadow for better visibility */}
             <div className="mb-4">
@@ -46,10 +56,11 @@ const SignUpPage = () => {
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="username"
                 placeholder="Enter your Name"
                 className="mt-1 block w-96 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm"
                 required
+                onChange={(e)=> setUsername(e.target.value)} 
               />
             </div>
             <div className="mb-4">
@@ -66,6 +77,7 @@ const SignUpPage = () => {
                 placeholder="Enter your Email"
                 className="mt-1 block w-96 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm"
                 required
+                onChange={(e)=> setEmail(e.target.value)} 
               />
             </div>
             <div className="mb-6">
@@ -82,6 +94,7 @@ const SignUpPage = () => {
                 placeholder="Enter your password"
                 className="mt-1 block w-96 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm"
                 required
+                onChange={(e)=> setPassword(e.target.value)} 
               />
             </div>
             <button
@@ -92,9 +105,9 @@ const SignUpPage = () => {
             </button>
             <p className="mt-4 text-sm text-gray-600">
           Already have an account?{" "}
-          <a href="#" className="text-black font-semibold">
+          <Link to={"/login"} className="text-black font-semibold">
             Login Here
-          </a>
+          </Link>
         </p>
           </form>
         </div>

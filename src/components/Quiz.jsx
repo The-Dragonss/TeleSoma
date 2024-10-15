@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti'; // For confetti effect
 import QuizIcon from '../assets/QuizIcon.svg'

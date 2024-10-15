@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NotificationIcon from '../assets/NotificationIcon.svg';
@@ -11,7 +12,7 @@ const RightColumn = () => {
     const [showNotifications, setShowNotifications] = useState(false);
     const navigate = useNavigate();
     return (
-        <div className="flex flex-col items-center gap-4 w-1/5  my-6 mx-8 rounded-2xl p-4 bg-secondaryBackground">
+        <div className="flex flex-col items-center gap-4 w-96 my-6 mx-8 rounded-2xl p-4 bg-secondaryBackground">
             {/* First Section */}
             <div className="flex justify-between w-full mb-4">
                 <img
@@ -48,15 +49,7 @@ const RightColumn = () => {
 
             <RandomQuotes />
         </div>
-
-
-
-
-
     )
-
-
-
 }
 
 export default RightColumn

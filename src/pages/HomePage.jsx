@@ -1,6 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import NavColumn from '../components/NavColumn'
-import FileUpload from '../components/FileUpload'
 import CourseDisplay from '../components/CourseDisplay'
 import Welcome from '../components/Welcome'
 import RightColum from '../components/RightColumn'

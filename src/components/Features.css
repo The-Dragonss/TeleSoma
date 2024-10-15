@@ -11,8 +11,8 @@
   padding: 5rem;
   background-color: #f3ebe5;
   border-radius: 0;
-  min-height: 100vh; /* Ensure container covers full viewport height */
-  position: relative; /* Establish a positioning context for absolute children */
+  min-height: 100vh; 
+  position: relative; 
 }
 
 .feature-card {

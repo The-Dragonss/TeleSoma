@@ -9,11 +9,10 @@ const Footer = () => {
     <>
       <div>
         <img src={FooterVector} alt=""
-
           className="mx-auto w-full"
         />
       </div>
-      <div className="bg-primaryOrange h-48 w-full flex flex-col md:flex-row justify-around items-center">
+      <div className="bg-primaryOrange h-12 w-full flex flex-col md:flex-row justify-around items-center">
         <div>Say Goodbye to Boring Study <br /> Sessions!</div>
         <div>Copyright @ 2024 TeloSoma.all right reserved.</div>
         <div className='flex  flex-row items-center gap-8'>

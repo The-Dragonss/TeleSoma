@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import NavColumn from '../components/NavColumn';
 
 const DashboardPage = () => {
   const chartData = [
@@ -22,9 +23,8 @@ const DashboardPage = () => {
   return (
     <div className="flex h-screen bg-[#FBF8F6] text-gray-800">
       {/* Sidebar */}
-      <div className="w-16 bg-white shadow-md flex flex-col items-center py-4 space-y-8">
-       where sidebar will be
-      </div>
+
+      <NavColumn />
 
       {/* Main Content */}
       <div className="flex-1 p-8 overflow-auto">

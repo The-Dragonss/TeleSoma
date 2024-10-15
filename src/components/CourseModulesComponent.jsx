@@ -3,6 +3,7 @@ import React from 'react';
 //can add those radial buttons that turn green once a module has been gone through nice to have but tiiiiimeeeeeeeeeeeeeeee
 const CourseModulesComponent = ({ courseTitle, modules, onModuleSelect }) => {
     return (
+        <>
         <div className="sm:w-1/4 my-10 max-sm:mx-auto sm:my-36 rounded-2xl ml-8 flex flex-col bg-white ">
             <h1 className="text-3xl font-bold p-4 my-4">{courseTitle}</h1>
 
@@ -20,6 +21,7 @@ const CourseModulesComponent = ({ courseTitle, modules, onModuleSelect }) => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

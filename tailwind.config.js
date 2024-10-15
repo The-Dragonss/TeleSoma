@@ -13,8 +13,6 @@ export default {
         purple: "#D5D2FE",
         green: "#BFF0DB",
         secondaryPurple: "#C38CF3",
-        purple: "#D5D2FE",
-        Green: "#BFF0DB",
         primaryOrange: "#FAE0C1",
         secondaryOrange: "#F8B577",
         background: "#FBF8F6",
@@ -22,6 +20,10 @@ export default {
       },
       height: {
         920: "57.5rem",
+      },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        body: ['Poppins', 'sans-serif'],
       },
     },
   },

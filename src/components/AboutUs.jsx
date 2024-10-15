@@ -15,7 +15,7 @@ const AboutUs = () => {
               <div className="absolute inset-0 bg-yellow-100 rounded-3xl transform rotate-3"></div>
               <div className="relative bg-yellow-200 rounded-3xl p-6">
                 <img 
-                  src="https://i.redd.it/i-got-bored-so-i-decided-to-draw-a-random-image-on-the-v0-4ig97vv85vjb1.png?width=1280&format=png&auto=webp&s=7177756d1f393b6e093596d06e1ba539f723264b" 
+                  src="telos4.png" 
                   alt="Frustrated student" 
                   className="w-full h-auto rounded-2xl"
                 />
