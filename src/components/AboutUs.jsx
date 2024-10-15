@@ -40,9 +40,9 @@ const AboutUs = () => {
 
       </div>
     </div>
-    <svg width="1509" height="290" viewBox="0 0 1509 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* <svg width="1509" height="290" viewBox="0 0 1509 290" fill="#000" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M-3 227H60C123 227 249 227 375 197C501 166 627 106 753 121C879 136 1005 227 1131 265C1257 303 1383 288 1446 280L1509 272V0H1446C1383 0 1257 0 1131 0C1005 0 879 0 753 0C627 0 501 0 375 0C249 0 123 0 60 0H-3V227Z" fill="#D5D2FE"/>
-    </svg>
+    </svg> */}
     </>
   );
 };
