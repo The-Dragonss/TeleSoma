@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import Colablinesvg from "../assets/collabline.svg";
+=======
+import "./Features.css";
+>>>>>>> 52e8ed549f3c11eefe60453395a2e2c6686a660b
 
 const features = [
   {
@@ -39,6 +43,7 @@ const features = [
 
 const Features = () => {
   return (
+<<<<<<< HEAD
     <div className="relative h-screen bg-[#f3ebe5] p-20">
       {/* Collaborative Study Groups */}
       <div
@@ -170,6 +175,22 @@ const Features = () => {
           fill="#82EDBF"
         />
       </svg>
+=======
+    <div className="features-container">
+      {features.map((feature, index) => (
+        <div
+          key={index}
+          id={feature.id} /* Assigning the ID */
+          className="feature-card"
+          style={{ borderColor: feature.color }}
+        >
+          <h3 key={index} style={{ color: feature.color }}>
+            {feature.title}
+          </h3>
+          <p>{feature.description}</p>
+        </div>
+      ))}
+>>>>>>> 52e8ed549f3c11eefe60453395a2e2c6686a660b
     </div>
   );
 };
