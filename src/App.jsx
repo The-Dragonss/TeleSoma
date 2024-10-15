@@ -18,7 +18,7 @@ export default function App() {
     <Route path="/homepage" element={<HomePage />}/>
     <Route path="/dashboard" element={<DashboardPage />}/>
     <Route path="/notes" element={<ChunkedNotesDisplay />}/>
-    <Route path="/quiz" element={<QuizPage />}/>
+    <Route path="/quizpage" element={<QuizPage />}/>
     <Route path="/signup" element={<SignUpPage />}/>
     <Route path="/login" element={<SignInPage />}/>
     <Route path="/sample" element={<LearningPlatform />}/>
