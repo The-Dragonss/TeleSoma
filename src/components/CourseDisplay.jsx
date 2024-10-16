@@ -89,7 +89,7 @@ const CourseDisplay = () => {
 
     return (
 
-        <div className='ml-8 mb-6'>
+        <div className='ml-8 mb-6 overflow-hidden'>
 
             <div className='flex flex-row justify-between items-center'>
                 <span className="p-4 h-14 w-1/6 ml-6 my-4 bg-secondaryBackground text-2xl font-bold rounded-2xl flex justify-center items-center">Courses</span>
