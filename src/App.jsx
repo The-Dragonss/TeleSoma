@@ -6,24 +6,24 @@ import SignUpPage from "./pages/SignUp";
 import SignInPage from "./pages/SignIn";
 import QuizPage from "./components/Quiz";
 import { AuthProvider } from "./context/AuthContext";
-import LearningPlatform from "./pages/Sample.JSX";
+
 import ChunkedNotesDisplay from "./pages/ChunkedNotesDisplayPage";
 
 export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-    <Routes>
-    <Route index element={<LandingPage/>}/>
-    <Route path="/homepage" element={<HomePage />}/>
-    <Route path="/dashboard" element={<DashboardPage />}/>
-    <Route path="/notes" element={<ChunkedNotesDisplay />}/>
-    <Route path="/quizpage" element={<QuizPage />}/>
-    <Route path="/signup" element={<SignUpPage />}/>
-    <Route path="/login" element={<SignInPage />}/>
-    <Route path="/sample" element={<LearningPlatform />}/>
-    </Routes>
-    </AuthProvider>
+        <Routes>
+          <Route index element={<LandingPage />} />
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/notes" element={<ChunkedNotesDisplay />} />
+          <Route path="/quizpage" element={<QuizPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/login" element={<SignInPage />} />
+
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   )
 }
