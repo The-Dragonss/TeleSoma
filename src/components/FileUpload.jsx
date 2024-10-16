@@ -57,7 +57,7 @@ const FileUploadButton = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center w-[500px] h-72 rounded-2xl m-2 bg-Green">
+        <div className="flex flex-col items-center justify-center max-sm:w-80 max-sm:h-60 w-96 h-56 rounded-2xl m-2 bg-Green">
             {loading ? (
                 <div className="flex flex-col items-center justify-center text-center">
                     <p className='font-extrabold text-xl p-1'>Uploading and Processing...</p>
