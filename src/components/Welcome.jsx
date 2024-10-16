@@ -39,11 +39,11 @@ const Welcome = () => {
     }, []);
 
     return (
-        <div className="text-center p-4 ml-8 h-1/3  ">
+        <div className="text-center p-4 ml-8 h-1/3 max-sm:h-32 max-sm:w-fit">
             {userName ? (
-                <h1 className="text-7xl  text-left mt-10">Welcome back,<br></br> {userName}!</h1>
+                <h1 className="text-7xl max-sm:text-2xl  text-left mt-10">Welcome back,<br></br> {userName}!</h1>
             ) : (
-                <h1 className="text-7xl  text-left mt-10">Welcome back!</h1>
+                <h1 className="text-7xl max-sm:text-2xl text-left mt-10">Welcome back!</h1>
             )}
         </div>
     );

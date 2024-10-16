@@ -89,17 +89,18 @@ const CourseDisplay = () => {
 
     return (
 
-        <div className='ml-8 mb-6'>
+        <div className=' ml-8  mb-6 max-sm:flex-col max-sm:h-screen max-sm:flex max-sm:w-full max-sm:overflow-y-auto max-sm:items-center max-sm:ml-0'>
 
-            <div className='flex flex-row justify-between items-center'>
-                <span className="p-4 h-14 w-1/6 ml-6 my-4 bg-secondaryBackground text-2xl font-bold rounded-2xl flex justify-center items-center">Courses</span>
+            <div className='flex flex-row justify-between items-center max-sm:w-fit  max-sm:flex-col-reverse max-sm:mt-4'>
+                <span className="p-4 h-14 w-1/6 ml-6 my-4 bg-secondaryBackground text-2xl font-bold rounded-2xl flex justify-center items-center max-sm:w-40">Courses</span>
                 <SearchBar
                     courses={courses}
                     onCourseSelect={(courseId) => navigate(`/courses/${courseId}`)}
+
                 />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                 <FileUpload />
 
@@ -112,7 +113,7 @@ const CourseDisplay = () => {
                     return (
                         <div
                             key={course.id}
-                            className={`flex flex-col justify-between w-[500px] h-72 rounded-2xl m-2 p-4 ${backgroundColor} hover:shadow-lg cursor-pointer`}
+                            className={`flex flex-col justify-between max-sm:w-80 max-sm:h-60 w-96 h-56 rounded-2xl m-2 p-4 ${backgroundColor} hover:shadow-lg cursor-pointer`}
                             onClick={() => navigate(`/courses/${course.id}`)}
                         >
                             {/* Top icons */}

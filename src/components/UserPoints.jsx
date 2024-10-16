@@ -56,13 +56,13 @@ const UserPoints = () => {
                 </div>
             </div>
 
-            {/* Button to simulate earning more points */}
+            {/* Button to simulate earning more points 
             <button
-                className="bg-blue-500 text-white p-2 rounded-lg"
+                className="bg-blue-500 text-white  rounded-lg"
                 onClick={() => earnPoints(10)} // Earn 10 points when clicked
             >
                 Earn 10 Points
-            </button>
+            </button>*/}
         </div>
     );
 };

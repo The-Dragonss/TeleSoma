@@ -38,7 +38,7 @@ const Streak = ({ streakCount, lastActiveDate }) => {
                 {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day, index) => (
                     <div
                         key={index}
-                        className={`w-12 h-12 rounded-full border border-black flex items-center justify-center 
+                        className={`w-10 h-10 rounded-full border border-black flex items-center justify-center 
                         ${today === index ? 'bg-pink-400' : 'bg-white'}`}
                     >
                         {day}

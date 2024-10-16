@@ -14,7 +14,7 @@ const SearchBar = ({ courses, onCourseSelect }) => {
     }, [searchInput, courses]);
 
     return (
-        <div className="relative flex flex-col w-1/4 justify-center items-center mr-4">
+        <div className="relative flex flex-col w-1/4 justify-center items-center mr-4  max-sm:w-2/4 max-sm:mr-0">
             {/* Container for the input and icon */}
             <div className="flex items-center bg-secondaryBackground rounded-2xl p-2 mx-6 mt-4 w-full">
                 {/* Icon before the input */}

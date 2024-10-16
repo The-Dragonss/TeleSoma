@@ -10,8 +10,9 @@ const NavColumn = () => {
 
     return (
         <>
-            {/* Navbar hidden by default on small screens */}
-            <div id="navbar" className="bg-secondaryBackground flex flex-row max-sm:items-center max-sm:p-2 max-sm:fixed max-sm:bottom-0 max-sm:w-full sm:flex-col sm:w-60 sm:my-6 sm:ml-6 sm:rounded-3xl  sm:flex">
+
+            <div id="navbar" className="bg-secondaryBackground flex flex-row max-sm:items-center max-sm:p-2 
+            max-sm:fixed max-sm:bottom-0 max-sm:left-0 max-sm:z-50 max-sm:w-full sm:flex-col sm:w-60 sm:my-6 sm:ml-6 sm:rounded-3xl  sm:flex">
                 <div className="mx-auto pt-4 hidden sm:flex">Logo
                     <a href="#home" className="">
                         <img src={Home} alt="Home Icon" className="w-6 h-6" />
