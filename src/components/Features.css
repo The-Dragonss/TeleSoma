@@ -3,10 +3,7 @@
   padding: 0;
 }
 
-<<<<<<< HEAD
 /*This is the card container*/
-=======
->>>>>>> 52e8ed549f3c11eefe60453395a2e2c6686a660b
 .features-container {
   display: flexbox;
   flex-wrap: wrap;
