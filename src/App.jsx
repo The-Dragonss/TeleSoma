@@ -22,7 +22,7 @@ export default function App() {
     <Route path="/signup" element={<SignUpPage />}/>
     <Route path="/login" element={<SignInPage />}/>
     <Route path="/sample" element={<DisplayChunks />}/>
-    </Routes>
+    <Routes>
     </ChunksProvider>
     </BrowserRouter>
   )

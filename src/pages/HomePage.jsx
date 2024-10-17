@@ -7,9 +7,9 @@ import RightColum from '../components/RightColumn'
 
 const HomePage = () => {
     return (
-        <div className='  h-screen flex w-full justify-center ' >
+        <div className=' max-sm:flex-col max-sm:h-auto h-screen flex w-full justify-center ' >
             <NavColumn />
-            <div className='flex flex-col '>
+            <div className='flex flex-col justify-between max-sm:w-full'>
                 <Welcome />
                 <CourseDisplay />
             </div>

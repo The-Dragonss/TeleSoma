@@ -54,17 +54,11 @@ const CompletedTracking = () => {
                 <p className="text-2xl font-bold pt-4">{courseComplete}</p>
             </div>
 
-
-
             {/* Modules Complete */}
             <div className=" bg-purple rounded-2xl text-center">
                 <h3 className="text-sm font-bold bg-secondaryPurple rounded-2xl">Modules Complete</h3>
                 <p className="text-2xl font-bold pt-4">{modulesComplete}</p>
             </div>
-
-
-
-
 
             {/* Quizzes Completed */}
             <div className="bg-Green rounded-2xl text-center">
