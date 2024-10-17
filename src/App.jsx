@@ -5,14 +5,14 @@ import DashboardPage from "./pages/Dashboard";
 import SignUpPage from "./pages/SignUp";
 import SignInPage from "./pages/SignIn";
 import QuizPage from "./components/Quiz";
-import { AuthProvider } from "./context/AuthContext";
-import LearningPlatform from "./pages/Sample.JSX";
 import ChunkedNotesDisplay from "./pages/ChunkedNotesDisplayPage";
+import { ChunksProvider } from "./context/ChunksContext";
+import DisplayChunks from "./pages/DisplayChunks";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <AuthProvider>
+    <ChunksProvider>
     <Routes>
     <Route index element={<LandingPage/>}/>
     <Route path="/homepage" element={<HomePage />}/>
@@ -21,9 +21,9 @@ export default function App() {
     <Route path="/quizpage" element={<QuizPage />}/>
     <Route path="/signup" element={<SignUpPage />}/>
     <Route path="/login" element={<SignInPage />}/>
-    <Route path="/sample" element={<LearningPlatform />}/>
+    <Route path="/sample" element={<DisplayChunks />}/>
     </Routes>
-    </AuthProvider>
+    </ChunksProvider>
     </BrowserRouter>
   )
 }

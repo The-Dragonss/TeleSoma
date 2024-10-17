@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ChunksContext } from '../context/ChunksContext'; // Import useChunks hook
 import NavColumn from '../components/NavColumn';
 import CourseModulesComponent from '../components/CourseModulesComponent';
 import NotesDisplayComponent from '../components/NotesDisplayComponent';
@@ -18,6 +19,9 @@ const ChunkedNotesDisplay = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768); // Initial state
     const [isNotesVisible, setIsNotesVisible] = useState(false); // To control module or notes display
     const navigate = useNavigate();
+    
+    // Fetch chunks from the context
+    const { chunks } = useContext(ChunksContext);
 
     useEffect(() => {
         const handleResize = () => {
@@ -30,15 +34,12 @@ const ChunkedNotesDisplay = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const courseData = {
-        title: "React for Beginners",
-        modules: [
-            { title: "Introduction", description: "Learn the basics of React.", notes: ["Note 1", "Note 2"] },
-            { title: "Components", description: "Understanding React components.", notes: ["Note 3", "Note 4"] },
-            { title: "State and Props", description: "Managing state and props in React.", notes: ["Note 5", "Note 6"] }
-        ],
-        quizzes: [{ title: "Quiz for React for Beginners" }]
-    };
+    // Transform the summarizedContent into a structure that the CourseModulesComponent can use
+    const modules = chunks.summarizedContent.map(item => ({
+        title: item.chunk,
+        description: item.description,
+        notes: [item.content]
+    }));
 
     const handleModuleSelect = (moduleOrQuiz) => {
         if (!moduleOrQuiz.notes) {
@@ -57,8 +58,8 @@ const ChunkedNotesDisplay = () => {
                 {isSmallScreen ? (
                     !isNotesVisible ? (
                         <CourseModulesComponent
-                            courseTitle={courseData.title}
-                            modules={courseData.modules}
+                            courseTitle={chunks.title} // Dynamic title from chunks
+                            modules={modules} // Use the transformed modules data
                             onModuleSelect={handleModuleSelect}
                         />
                     ) : (
@@ -70,8 +71,8 @@ const ChunkedNotesDisplay = () => {
                 ) : (
                     <>
                         <CourseModulesComponent
-                            courseTitle={courseData.title}
-                            modules={courseData.modules}
+                            courseTitle={chunks.title} // Dynamic title from chunks
+                            modules={modules} // Use the transformed modules data
                             onModuleSelect={handleModuleSelect}
                         />
                         <NotesDisplayComponent

@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -19,8 +20,8 @@ function NavBar() {
         </a>
       </div>
       <div className="flex space-x-4">
-        <button className="bg-black text-white px-4 py-2 w-32 rounded-full hover:bg-gray-800">Sign Up</button>
-        <button className="bg-black text-white px-4 py-2 w-32 rounded-full hover:bg-gray-800">Login</button>
+       <Link to={"/signup"}> <button className="bg-black text-white px-4 py-2 w-32 rounded-full hover:bg-gray-800">Sign Up</button></Link>
+       <Link to={"/login"}> <button className="bg-black text-white px-4 py-2 w-32 rounded-full hover:bg-gray-800">Login</button></Link>
       </div>
     </nav>
   )

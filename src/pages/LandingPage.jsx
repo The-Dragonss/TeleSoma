@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 function LandingPage() {
   return (
-    <div>
+    <div className="bg-[#f3ebe5]">
      <Hero />
      <AboutUs />
      <Features />
