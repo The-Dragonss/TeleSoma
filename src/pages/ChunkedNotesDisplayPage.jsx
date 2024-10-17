@@ -19,7 +19,7 @@ const ChunkedNotesDisplay = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768); // Initial state
     const [isNotesVisible, setIsNotesVisible] = useState(false); // To control module or notes display
     const navigate = useNavigate();
-    
+
     // Fetch chunks from the context
     const { chunks } = useContext(ChunksContext);
 
@@ -54,7 +54,7 @@ const ChunkedNotesDisplay = () => {
         <div className="bg-background max-sm:flex-col sm:h-screen flex">
             <NavColumn />
 
-            <div className="bg-secondaryBackground max-sm:auto flex w-full sm:my-14 max-sm:h-screen sm:mx-8 justify-center rounded-2xl">
+            <div className=" bg-purple max-sm:auto flex w-full sm:my-14 max-sm:h-screen sm:mx-8 justify-center rounded-2xl">
                 {isSmallScreen ? (
                     !isNotesVisible ? (
                         <CourseModulesComponent

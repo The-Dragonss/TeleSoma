@@ -48,7 +48,7 @@ const CourseModulesComponent = ({ courseTitle, modules, onModuleSelect }) => {
             <div className="mt-4 p-4">
                 <div className="mt-2 cursor-pointer"
                     onClick={() => navigate(`/quizpage`)}>
-                    <p className="text-gray-800 rounded-2xl bg-secondaryBackground text-2xl font-bold p-4">{`Quiz for ${courseTitle}`}</p>
+                    <p className="text-gray-800 rounded-2xl bg-secondaryBackground text-2xl text-center font-bold p-4">{`Quiz`}</p>
                 </div>
             </div>
         </div>

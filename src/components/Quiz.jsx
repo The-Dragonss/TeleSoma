@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import confetti from "canvas-confetti"; // For confetti effect
 import QuizIcon from "../assets/QuizIcon.svg";
 import { ChunksContext } from "../context/ChunksContext"; // Adjust the import path as necessary
+import { Link } from "react-router-dom";
 
 const QuizPage = () => {
   const { chunks } = useContext(ChunksContext); // Consume the context
@@ -52,17 +53,21 @@ const QuizPage = () => {
     const percentage = (score / questions.length) * 100;
     return (
       <div className="flex flex-col items-center gap-2 justify-center h-screen bg-background">
-        <h1 className="text-6xl font-bold">Quiz Finished!</h1>
-        <p className="text-3xl font-semibold">
-          Your score: {Math.round(percentage)}%
-        </p>
-        {Math.round(percentage) > 70 ? (
-          <p className="text-green-500 text-xl">
-            🎉 Congratulations! You passed!
+        <div>
+          <h1 className="text-6xl font-bold">Quiz Finished!</h1>
+          <p className="text-3xl font-semibold">
+            Your score: {Math.round(percentage)}%
           </p>
-        ) : (
-          <p className="text-red-500 text-xl">😢 Better luck next time!</p>
-        )}
+          {Math.round(percentage) > 70 ? (
+            <p className="text-green-500 text-xl">
+              🎉 Congratulations! You passed!
+            </p>
+          ) : (
+            <p className="text-red-500 text-xl">😢 Better luck next time!</p>
+
+          )}
+        </div>
+        <Link to={"/homepage"} className="bg-black text-white font-bold rounded-2xl p-4"> Go to Home</Link>
       </div>
     );
   }
@@ -98,13 +103,12 @@ const QuizPage = () => {
           {questions[currentQuestionIndex]?.choices.map((choice, index) => (
             <button
               key={index}
-              className={`flex items-center p-6 rounded-2xl text-left w-full mx-auto ${
-                userAnswers[currentQuestionIndex] === choice
-                  ? feedback === "correct"
-                    ? "bg-Green"
-                    : "bg-red-300"
-                  : "bg-background"
-              }`}
+              className={`flex items-center p-6 rounded-2xl text-left w-full mx-auto ${userAnswers[currentQuestionIndex] === choice
+                ? feedback === "correct"
+                  ? "bg-Green"
+                  : "bg-red-300"
+                : "bg-background"
+                }`}
               onClick={() => handleAnswerSelect(choice)}
             >
               {/* Circle containing the letter A, B, C, D */}
@@ -131,6 +135,8 @@ const QuizPage = () => {
           >
             {currentQuestionIndex === questions.length - 1 ? "Finish" : "Next"}
           </button>
+
+
         </div>
       </div>
     </div>

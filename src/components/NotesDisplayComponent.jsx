@@ -94,7 +94,7 @@ const NotesDisplayComponent = ({ notes, backgroundImage }) => {
                     <button
                         onClick={goToPrevPage}
                         disabled={currentPage === 0}
-                        className={`p-4 bg-secondaryBackground rounded-full text-2xl transition-opacity ${currentPage === 0 ? 'opacity-50' : 'opacity-100'} hover:opacity-75`}
+                        className={`p-4 bg-primaryPink rounded-full text-2xl transition-opacity ${currentPage === 0 ? 'opacity-50' : 'opacity-100'} hover:opacity-75`}
                     >
                         &larr;
                     </button>
@@ -104,7 +104,7 @@ const NotesDisplayComponent = ({ notes, backgroundImage }) => {
                     <button
                         onClick={goToNextPage}
                         disabled={currentPage === totalPages - 1}
-                        className={`p-4 bg-secondaryBackground rounded-full text-2xl transition-opacity ${currentPage === totalPages - 1 ? 'opacity-50' : 'opacity-100'} hover:opacity-75`}
+                        className={`p-4 bg-purple rounded-full text-2xl transition-opacity ${currentPage === totalPages - 1 ? 'opacity-50' : 'opacity-100'} hover:opacity-75`}
                     >
                         &rarr;
                     </button>

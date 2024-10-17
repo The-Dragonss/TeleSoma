@@ -29,9 +29,9 @@ const CompletedTracking = () => {
     useEffect(() => {
         // Dummy data to simulate the API response
         const dummyData = {
-            coursesCompleted: 3,
-            modulesCompleted: 15,
-            quizzesCompleted: 45
+            coursesCompleted: 0,
+            modulesCompleted: 0,
+            quizzesCompleted: 0
         };
 
         // Simulating a fetch call with a timeout
