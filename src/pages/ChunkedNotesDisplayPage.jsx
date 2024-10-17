@@ -43,7 +43,7 @@ const ChunkedNotesDisplay = () => {
 
     const handleModuleSelect = (moduleOrQuiz) => {
         if (!moduleOrQuiz.notes) {
-            navigate('/quiz');
+            navigate('/quizpage');
         } else {
             setSelectedContent(moduleOrQuiz.notes);
             setIsNotesVisible(true); // Show notes on small screen

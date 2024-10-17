@@ -4,6 +4,7 @@ import Home from '../assets/Home.svg';
 import Calendar from '../assets/Calendar.svg';
 import Groups from '../assets/Groups.svg';
 import Settings from '../assets/Settings.svg';
+import { Link } from 'react-router-dom';
 
 const NavColumn = () => {
 
@@ -20,9 +21,9 @@ const NavColumn = () => {
 
                 <div className="flex flex-row max-sm:gap-6  max-sm:mx-auto sm:flex-col sm:my-auto sm:mx-auto sm:space-y-12">
                     <div className="bg-white rounded-full h-16 w-16 hover:bg-primaryOrange relative">
-                        <a href="#home" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <Link to={'/homepage'} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             <img src={Home} alt="Home Icon" className="w-10 h-10" />
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="bg-white rounded-full h-16 w-16 hover:bg-primaryOrange relative">

@@ -202,7 +202,7 @@ const CourseDisplay = () => {
                 <div
                     key={chunks.id}
                     className={`flex flex-col justify-between w-96 h-56 rounded-2xl m-2 p-4 ${backgroundColor} hover:shadow-lg cursor-pointer`}
-                    onClick={() => navigate(`/courses/${chunks.id}`)}
+                    onClick={() => navigate('/notes')}
                 >
                     {/* Top icons */}
                     <div className="flex justify-between">
