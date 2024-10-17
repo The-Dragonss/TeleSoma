@@ -30,8 +30,8 @@ const CourseModulesComponent = ({ courseTitle, modules, onModuleSelect }) => {
          }, [courseTitle]);
      */}
     return (
-        <div className="sm:w-1/4 my-10 max-sm:mx-auto sm:my-36 rounded-2xl ml-8 flex flex-col bg-white ">
-            <h1 className="text-3xl font-bold p-4 my-4">{courseTitle}</h1>
+        <div className="sm:w-1/4 my-10 max-sm:mx-auto sm:my-36 rounded-2xl ml-8 flex flex-col bg-white sm:overflow-y-auto">
+            <h1 className="text-2xl font-bold p-4 my-4  ">{courseTitle}</h1>
 
             {/*{loading && <p>Loading modules...</p>}
             {error && <p className="text-red-500">{error}</p>}*/}
@@ -42,12 +42,13 @@ const CourseModulesComponent = ({ courseTitle, modules, onModuleSelect }) => {
                         <h2 className="text-xl font-semibold">{module.title}</h2>
                         <p className="text-gray-600">{module.description}</p>
                     </div>
-                ))}</div>
+                ))}
+            </div>
 
             <div className="mt-4 p-4">
                 <div className="mt-2 cursor-pointer"
-                    onClick={() => onModuleSelect({ notes: [] })}> {/*onClick={() => navigate(`/courses/${courseTitle}/quiz`)}*/}
-                    <p className="text-gray-800 rounded-2xl bg-secondaryBackground text-2xl font-bold p-4">{`Quiz for ${courseTitle}`}</p>
+                    onClick={() => navigate(`/quizpage`)}>
+                    <p className="text-gray-800 rounded-2xl bg-secondaryBackground text-2xl text-center font-bold p-4">{`Quiz`}</p>
                 </div>
             </div>
         </div>

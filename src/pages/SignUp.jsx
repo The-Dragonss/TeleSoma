@@ -1,5 +1,10 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
+import { createUserWithEmailAndPassword, updateProfile  } from "firebase/auth";
+import { auth } from "../../firebase";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const SignUpPage = () => {
   const features = [
@@ -10,6 +15,79 @@ const SignUpPage = () => {
     "REMINDERS",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "userName") setUserName(value);
+    if (name === "email") setEmail(value);
+    if (name === "password") setPassword(value);
+  };
+
+  // Handle user sign up with email and password
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      // Create a new user with email and password
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+  
+      // Get the user object
+      const user = userCredential.user;
+  
+      // Update the user's profile to include the display name (username)
+      await updateProfile(user, {
+        displayName: userName
+      });
+  
+      // Show success alert and navigate to the landing page
+      Swal.fire({
+        title: "Success!",
+        text: "You have successfully signed up!",
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(() => {
+        navigate("/homepage"); 
+      });
+    } catch (err) {
+      // Handle errors here
+      const errorMessage = err.message;
+      const errorCode = err.code;
+  
+      setError(true);
+  
+      switch (errorCode) {
+        case "auth/weak-password":
+          setErrorMessage("The password is too weak.");
+          break;
+        case "auth/email-already-in-use":
+          setErrorMessage(
+            "This email address is already in use by another account."
+          );
+          break;
+        case "auth/invalid-email":
+          setErrorMessage("This email address is invalid.");
+          break;
+        case "auth/operation-not-allowed":
+          setErrorMessage("Email/password accounts are not enabled.");
+          break;
+        default:
+          setErrorMessage(errorMessage);
+          break;
+      }
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,34 +100,27 @@ const SignUpPage = () => {
   return (
     <div className="flex h-screen bg-[#F3EBE5]">
       <div className="w-1/2 p-12 m-12">
-      <div className="flex flex-col items-center"> {/* Centering container */}
-  <h1 className="text-3xl font-bold mb-6">Sign up to TeloSoma today</h1>
-  <button className="w-96 py-2 px-4 border border-gray-300 rounded-full mb-4 flex items-center justify-center">
-    <span className="mr-2">G</span>
-    Sign in with Google
-  </button>
-  <div className="text-center text-gray-500 mb-4">or</div>
-</div>
+        <div className="flex flex-col items-center">
+          <h1 className="text-3xl font-bold mb-6">Sign up to TeloSoma today</h1>
+        </div>
         <div className="flex justify-center h-screen">
-          {" "}
-          {/* Centering container */}
-          <form className="p-6 rounded-md">
-            {" "}
-            {/* Added padding and shadow for better visibility */}
+          <form className="p-6 rounded-md" onSubmit={handleSubmit}>
             <div className="mb-4">
               <label
-                htmlFor="name"
+                htmlFor="userName"
                 className="block text-sm font-medium text-gray-700"
               >
                 Name *
               </label>
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="userName"
+                name="userName"
                 placeholder="Enter your Name"
                 className="mt-1 block w-96 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm"
                 required
+                onChange={handleChange}
+                value={userName}
               />
             </div>
             <div className="mb-4">
@@ -66,6 +137,8 @@ const SignUpPage = () => {
                 placeholder="Enter your Email"
                 className="mt-1 block w-96 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm"
                 required
+                onChange={handleChange}
+                value={email}
               />
             </div>
             <div className="mb-6">
@@ -82,6 +155,8 @@ const SignUpPage = () => {
                 placeholder="Enter your password"
                 className="mt-1 block w-96 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm"
                 required
+                onChange={handleChange}
+                value={password}
               />
             </div>
             <button
@@ -91,11 +166,11 @@ const SignUpPage = () => {
               Create Account
             </button>
             <p className="mt-4 text-sm text-gray-600">
-          Already have an account?{" "}
-          <a href="#" className="text-black font-semibold">
-            Login Here
-          </a>
-        </p>
+              Already have an account?{" "}
+              <Link to={"/login"} className="text-black font-semibold">
+                Login Here
+              </Link>
+            </p>
           </form>
         </div>
       </div>

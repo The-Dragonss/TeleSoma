@@ -29,9 +29,9 @@ const CompletedTracking = () => {
     useEffect(() => {
         // Dummy data to simulate the API response
         const dummyData = {
-            coursesCompleted: 3,
-            modulesCompleted: 15,
-            quizzesCompleted: 45
+            coursesCompleted: 0,
+            modulesCompleted: 0,
+            quizzesCompleted: 0
         };
 
         // Simulating a fetch call with a timeout
@@ -50,21 +50,15 @@ const CompletedTracking = () => {
         <div className="grid grid-cols-3 gap-4 p-2">
             {/* Course Complete */}
             <div className=" rounded-2xl text-center bg-primaryOrange ">
-                <h3 className="text-sm font-bold bg-secondaryOrange rounded-2xl">Courses Completed</h3>
+                <h3 className="text-sm font-bold bg-secondaryOrange rounded-2xl">Courses Complete</h3>
                 <p className="text-2xl font-bold pt-4">{courseComplete}</p>
             </div>
 
-
-
             {/* Modules Complete */}
             <div className=" bg-purple rounded-2xl text-center">
-                <h3 className="text-sm font-bold bg-secondaryPurple rounded-2xl">Modules Completed</h3>
+                <h3 className="text-sm font-bold bg-secondaryPurple rounded-2xl">Modules Complete</h3>
                 <p className="text-2xl font-bold pt-4">{modulesComplete}</p>
             </div>
-
-
-
-
 
             {/* Quizzes Completed */}
             <div className="bg-Green rounded-2xl text-center">

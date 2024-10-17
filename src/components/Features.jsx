@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import "./Features.css";
 
@@ -39,7 +40,8 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="features-container">
+    <div className="features-container h-screen">
+       <h1 className='text-center font-bold text-2xl  pt-8 md:text-5xl '>Features</h1>
       {features.map((feature, index) => (
         <div
           key={index}

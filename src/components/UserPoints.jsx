@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const UserPoints = () => {
     // State for daily and total points
     const [dailyXP, setDailyXP] = useState(0);
-    const [totalXP, setTotalXP] = useState(1000); // Assume the user has 1000 points initially
+    const [totalXP, setTotalXP] = useState(0); // Assume the user has 1000 points initially
 
     // Function to update points when an action is completed
     const earnPoints = (points) => {
