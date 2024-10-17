@@ -17,10 +17,10 @@ const RightColumn = () => {
                 <img
                     src={NotificationIcon}
                     alt="Notifications"
-                    className="w-6 h-6 cursor-pointer"
+                    className="w-8 h-8 cursor-pointer"
                     onClick={() => setShowNotifications(!showNotifications)}
                 />
-                <img src={ModeIcon} alt="Mode" className="w-6 h-6 cursor-pointer" />
+                <img src={ModeIcon} alt="Mode" className="w-8 h-8 cursor-pointer" />
             </div>
 
             {/* Notification Pop-up */}

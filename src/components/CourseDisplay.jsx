@@ -38,7 +38,7 @@
 
 //     const Avatars = [Avatar1, Avatar2, Avatar3, Avatar4];
 
-   
+
 //     // Using dummy data 
 //     useEffect(() => {
 //         const dummyCourses = [
@@ -174,9 +174,9 @@ const CourseDisplay = () => {
 
     if (!chunks) {
         return (
-            <div className='ml-8 '>
-                <div className='flex flex-row justify-between items-center'>
-                    <span className="p-4 h-6 w-1/6 ml-6 mt-4 bg-secondaryBackground text-2xl font-bold rounded-2xl flex justify-center items-center">Courses</span>
+            <div className='ml-8  mb-6 max-sm:flex-col max-sm:h-screen max-sm:flex max-sm:w-full max-sm:overflow-y-auto max-sm:items-center max-sm:ml-0 '>
+                <div className='flex flex-row justify-between items-center max-sm:w-fit  max-sm:flex-col-reverse max-sm:mt-4'>
+                    <span className="p-4 h-14 w-1/6 ml-6 my-4 bg-secondaryBackground text-2xl font-bold rounded-2xl flex justify-center items-center max-sm:w-40">Courses</span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -191,9 +191,9 @@ const CourseDisplay = () => {
     const randomAvatar = Avatars[0 % Avatars.length];
 
     return (
-        <div className='ml-8 '>
-            <div className='flex flex-row justify-between items-center'>
-                <span className="p-4 h-6 w-1/6 ml-6 mt-4 bg-secondaryBackground text-2xl font-bold rounded-2xl flex justify-center items-center">Courses</span>
+        <div className='ml-8  mb-6 max-sm:flex-col max-sm:h-screen max-sm:flex max-sm:w-full max-sm:overflow-y-auto max-sm:items-center max-sm:ml-0  '>
+            <div className='flex flex-row justify-between items-center max-sm:w-fit  max-sm:flex-col-reverse max-sm:mt-4'>
+                <span className="p-4 h-14 w-1/6 ml-6 my-4 bg-secondaryBackground text-2xl font-bold rounded-2xl flex justify-center items-center max-sm:w-40">Courses</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -201,7 +201,7 @@ const CourseDisplay = () => {
 
                 <div
                     key={chunks.id}
-                    className={`flex flex-col justify-between w-96 h-56 rounded-2xl m-2 p-4 ${backgroundColor} hover:shadow-lg cursor-pointer`}
+                    className={`flex flex-col justify-between max-sm:w-80 max-sm:h-60 w-96 h-56 rounded-2xl m-2 p-4 ${backgroundColor} hover:shadow-lg cursor-pointer`}
                     onClick={() => navigate('/notes')}
                 >
                     {/* Top icons */}
@@ -214,7 +214,7 @@ const CourseDisplay = () => {
 
                     {/* Course Name */}
                     <h2 className="font-bold text-xl mt-6">{chunks.title}</h2>
-                    <h2 className="text-sm mb-2">{chunks.subtitle}</h2>
+
 
                     {/* Progress Bar */}
                     <div className="w-full bg-gray-200 rounded-full h-4">

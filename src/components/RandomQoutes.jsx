@@ -26,7 +26,7 @@ const RandomQuotes = () => {
     }, []);
 
     return (
-        <div className="w-full mt-16 p-4 text-center">
+        <div className="w-full p-4 text-center">
             <p className="italic text-2xl">"{randomQuote.quote}"</p>
             <p className="font-bold">- {randomQuote.author}</p>
         </div>

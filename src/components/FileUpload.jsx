@@ -261,7 +261,7 @@ const FileUploadButton = () => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    
+
     // Use context instead of local state
     const { setChunks } = useContext(ChunksContext);
 
@@ -318,14 +318,14 @@ const FileUploadButton = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center w-96 h-auto p-6 rounded-2xl m-2 bg-green-500">
+        <div className="flex flex-col items-center justify-center max-sm:w-80 max-sm:h-60 w-96 h-56 rounded-2xl m-2 bg-Green">
             {loading ? (
                 <div className="flex flex-col items-center justify-center text-center">
-                    <p className="font-extrabold text-xl p-1">Processing with AI...</p>
+                    <p className="font-extrabold text-xl p-1">Uploading and Processing...</p>
                     <Audio
                         height="30"
                         width="30"
-                        color="#ffffff"
+                        color="#4fa94d"
                         ariaLabel="audio-loading"
                         visible={true}
                     />
@@ -343,7 +343,7 @@ const FileUploadButton = () => {
                     {!selectedFile && (
                         <label
                             htmlFor="fileInput"
-                            className="flex flex-col items-center justify-center text-center cursor-pointer p-4 border-2 border-dashed border-gray-300 rounded-md"
+                            className="flex flex-col items-center justify-center text-center cursor-pointer p-4 rounded-md"
                         >
                             <img src={Add} alt="Add icon" className="w-10 h-10 mb-2" />
                             <p className="font-extrabold text-xl p-1">Add Document</p>
@@ -357,13 +357,13 @@ const FileUploadButton = () => {
                             <div className="flex flex-row justify-center mt-4 space-x-4">
                                 <button
                                     type="submit"
-                                    className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+                                    className="p-4 bg-black text-white rounded-2xl mr-2 transition"
                                 >
-                                    Process with AI
+                                    Upload File
                                 </button>
                                 <button
                                     type="button"
-                                    className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
+                                    className="underline"
                                     onClick={handleCancel}
                                 >
                                     Cancel

@@ -9,7 +9,7 @@ const HomePage = () => {
     return (
         <div className='  h-screen flex w-full justify-center ' >
             <NavColumn />
-            <div className='flex flex-col justify-between'>
+            <div className='flex flex-col '>
                 <Welcome />
                 <CourseDisplay />
             </div>

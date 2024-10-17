@@ -50,7 +50,7 @@ const CompletedTracking = () => {
         <div className="grid grid-cols-3 gap-4 p-2">
             {/* Course Complete */}
             <div className=" rounded-2xl text-center bg-primaryOrange ">
-                <h3 className="text-lg font-bold bg-secondaryOrange rounded-2xl">Courses Complete</h3>
+                <h3 className="text-sm font-bold bg-secondaryOrange rounded-2xl">Courses Complete</h3>
                 <p className="text-2xl font-bold pt-4">{courseComplete}</p>
             </div>
 
@@ -58,7 +58,7 @@ const CompletedTracking = () => {
 
             {/* Modules Complete */}
             <div className=" bg-purple rounded-2xl text-center">
-                <h3 className="text-lg font-bold bg-secondaryPurple rounded-2xl">Modules Complete</h3>
+                <h3 className="text-sm font-bold bg-secondaryPurple rounded-2xl">Modules Complete</h3>
                 <p className="text-2xl font-bold pt-4">{modulesComplete}</p>
             </div>
 
@@ -68,7 +68,7 @@ const CompletedTracking = () => {
 
             {/* Quizzes Completed */}
             <div className="bg-Green rounded-2xl text-center">
-                <h3 className="text-lg font-bold bg-green-300 rounded-2xl">Quizzes Completed</h3>
+                <h3 className="text-sm font-bold bg-teal-200 rounded-2xl">Quizzes Completed</h3>
                 <p className="text-2xl font-bold pt-4">{quizzesComplete}</p>
             </div>
         </div>
