@@ -11,7 +11,7 @@ const RightColumn = () => {
     const [showNotifications, setShowNotifications] = useState(false);
     const navigate = useNavigate();
     return (
-        <div className="flex flex-col items-center gap-4 w-1/5  my-6 mx-8 rounded-2xl p-4 bg-secondaryBackground">
+        <div className="flex flex-col items-center gap-4 w-1/5  my-6 mx-8 rounded-2xl p-4 bg-secondaryBackground max-sm:hidden">
             {/* First Section */}
             <div className="flex justify-between w-full mb-4">
                 <img
