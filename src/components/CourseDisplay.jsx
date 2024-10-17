@@ -1,4 +1,4 @@
-/ eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CourseIcon1pink from '../assets/CourseIcon1pink.svg';

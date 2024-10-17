@@ -7,7 +7,6 @@ import SignInPage from "./pages/SignIn";
 import QuizPage from "./components/Quiz";
 import ChunkedNotesDisplay from "./pages/ChunkedNotesDisplayPage";
 import { ChunksProvider } from "./context/ChunksContext";
-import DisplayChunks from "./pages/DisplayChunks";
 
 export default function App() {
   return (
@@ -21,8 +20,7 @@ export default function App() {
     <Route path="/quizpage" element={<QuizPage/>}/>
     <Route path="/signup" element={<SignUpPage />}/>
     <Route path="/login" element={<SignInPage />}/>
-    <Route path="/sample" element={<DisplayChunks />}/>
-    <Routes>
+    </Routes>
     </ChunksProvider>
     </BrowserRouter>
   )
