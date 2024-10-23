@@ -1,6 +1,6 @@
 # TELOSOMA 
 
-Welcome to the TELOSOMA repository! This README will guide you through setting up, working on, and contributing to the project. This is a link to the Documentation: [TeloSoma Documentation](https://drive.google.com/file/d/1Y9M_s16-3jx55_B9glLfm9BwDFZQOLib/view?usp=sharing))
+Welcome to the TELOSOMA repository! This README will guide you through setting up, working on, and contributing to the project. This is a link to the Documentation: [TeloSoma Documentation](https://drive.google.com/file/d/1Y9M_s16-3jx55_B9glLfm9BwDFZQOLib/view?usp=sharing)
 
 ## Table of Contents
 
