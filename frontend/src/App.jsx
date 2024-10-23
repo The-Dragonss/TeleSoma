@@ -11,17 +11,17 @@ import { ChunksProvider } from "./context/ChunksContext";
 export default function App() {
   return (
     <BrowserRouter>
-    <ChunksProvider>
-    <Routes>
-    <Route index element={<LandingPage/>}/>
-    <Route path="/homepage" element={<HomePage />}/>
-    <Route path="/dashboard" element={<DashboardPage />}/>
-    <Route path="/notes" element={<ChunkedNotesDisplay />}/>
-    <Route path="/quizpage" element={<QuizPage/>}/>
-    <Route path="/signup" element={<SignUpPage />}/>
-    <Route path="/login" element={<SignInPage />}/>
-    </Routes>
-    </ChunksProvider>
+      <ChunksProvider>
+        <Routes>
+          <Route index element={<LandingPage />} />
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/notes" element={<ChunkedNotesDisplay />} />
+          <Route path="/quizpage" element={<QuizPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/login" element={<SignInPage />} />
+        </Routes>
+      </ChunksProvider>
     </BrowserRouter>
   )
 }

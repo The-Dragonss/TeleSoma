@@ -121,7 +121,7 @@ const QuizPage = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between sm:mt-20">
+        <div className="flex justify-between sm:mt-10">
           <button
             onClick={handlePrevQuestion}
             disabled={currentQuestionIndex === 0}
