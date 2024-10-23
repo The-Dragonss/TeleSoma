@@ -20,7 +20,7 @@ Welcome to the TELOSOMA repository! This README will guide you through setting u
   ```
 - cd into this folder:
   ```
-  telesomi
+  Telesoma
   ```
   - cd into this folder:
   ```
