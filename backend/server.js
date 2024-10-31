@@ -16,39 +16,64 @@ app.use(express.json());
 
 // Define the custom prompt
 chunking_quiz_prompt = `
-You are a chunking expert specializing in breaking down educational materials into manageable, cognitively efficient pieces. Given an input document, follow the chunking guidelines below to break each chapter into appropriate chunks based on content type, structure, and cognitive load.
+You are a chunking expert specializing in breaking down educational materials into detailed, cognitively manageable sections while preserving all important information. Your goal is to organize content without losing any significant details.
 
-For each chapter:
-1. **Analyze the chapter’s structure**: Focus on sections and subsections of the uploaded file and only provide information derived from it.
-2. **Apply chunking rules based on content type**:
-   - For **conceptual content**, group related ideas or topics into manageable sections.
-   - For **procedural content**, chunk step-by-step instructions or processes.
-   - For **mixed content**, ensure each section’s concepts, examples, and visuals are treated as individual chunks.
-3. **Use visual or logical breaks**: Utilize headings, subheadings, or bullet points to clearly define each chunk.
-4. **Exhaustive content**: The summarized content should be explained in simpler, understandable terms and be as exhaustive as possible.
-5. **Miller's Law**: Use Miller's Law to ensure that each chunk contains between 5 to 9 main points, ideas, or concepts.
-6. **Include a brief description**: At the beginning of each chunk, include a short, 5-word summary describing the chunk.
-7. **Quiz generation**: At the end of each chapter, generate around 7 multiple-choice questions with three options and an answer based on the content covered in each chunk.
+For each chapter, follow these guidelines:
 
-**Important**: Respond strictly in valid JSON format as follows:
+1. *Content Analysis and Preservation*:
+   - Maintain all key details, examples, and explanations from the original text
+   - Preserve technical terms, specific examples, and numerical data
+   - Keep original quotes and citations when present
+   - Retain all contextual information and supporting details
 
- {
-"title": "<Title>",
-"subtitle": "<Subtitle>",
-"summarizedContent": [
+2. *Meaningful Sectioning*:
+   - Create descriptive, content-based titles that reflect the specific topic or concept
+   - Avoid generic titles like "Chunk 1" - instead use titles like "Quantum Entanglement Principles" or "Medieval Trade Routes"
+   - Each section should have a clear thematic focus while maintaining full detail
+
+3. *Content Organization Rules*:
+   - For *theoretical content*: Keep all definitions, explanations, and supporting evidence together
+   - For *procedural content*: Maintain complete step-by-step instructions with all details and warnings
+   - For *case studies*: Keep all context, analysis, and outcomes together
+   - For *examples*: Include all relevant details, conditions, and explanations
+
+4. *Structure Guidelines*:
+   - Use clear hierarchical organization with main topics and subtopics
+   - Maintain all original bullet points, lists, and enumerations
+   - Preserve relationships between ideas and concepts
+   - Keep related examples and explanations together
+
+5. *Detail Preservation Checklist*:
+   - Include all definitions and technical terms
+   - Maintain all examples and illustrations
+   - Preserve cause-and-effect relationships
+   - Keep all numerical data and statistics
+   - Retain all contextual information
+
+6. *Quiz Generation*:
+   - Create detailed 7 questions that test specific knowledge
+   - Include complex scenarios from the content
+   - Use precise language from the original text
+   - Ensure questions cover both broad concepts and specific details
+
+Respond in valid JSON format as follows:
 {
-"chunk": "<Chunk N>",
-"description": "<Short 5-word description>",
-"content": "<Chunk content>"
-}
-],
-"quiz": [
-{
-"question": "<Quiz question>",
-"options": ["<Option 1>", "<Option 2>", "<Option 3>"],
-"answer": "<Correct answer>"
-}
-]
+  "title": "<Specific topic-based title>",
+  "subtitle": "<Detailed subtitle>",
+  "summarizedContent": [
+    {
+      "chunk": "<Specific, descriptive topic title>",
+      "description": "<One-sentence topic overview>",
+      "content": "<Complete detailed content with all important information preserved>"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "<Detailed scenario or concept-based question>",
+      "options": ["<Detailed option 1>", "<Detailed option 2>", "<Detailed option 3>"],
+      "answer": "<Correct answer>"
+    }
+  ]
 }
 `;
 // Configure multer for file uploads
@@ -60,9 +85,7 @@ const upload = multer({
 // Utility function to extract text from DOCX files
 const extractTextFromDocx = async (buffer) => {
   const doc = await docx.Packer.toBuffer(Document.fromBuffer(buffer));
-  // Note: For robust DOCX parsing, consider using 'docx' or 'docx-parser' packages
-  // Here, we'll use a placeholder as 'docx' doesn't support direct text extraction
-  // You might need to switch to 'docx4js' or another library for proper parsing
+
   return "DOCX parsing not implemented.";
 };
 

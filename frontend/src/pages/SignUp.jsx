@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
-import { createUserWithEmailAndPassword, updateProfile  } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -34,7 +34,7 @@ const SignUpPage = () => {
   // Handle user sign up with email and password
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       // Create a new user with email and password
       const userCredential = await createUserWithEmailAndPassword(
@@ -42,15 +42,15 @@ const SignUpPage = () => {
         email,
         password
       );
-  
+
       // Get the user object
       const user = userCredential.user;
-  
+
       // Update the user's profile to include the display name (username)
       await updateProfile(user, {
         displayName: userName
       });
-  
+
       // Show success alert and navigate to the landing page
       Swal.fire({
         title: "Success!",
@@ -58,15 +58,15 @@ const SignUpPage = () => {
         icon: "success",
         confirmButtonText: "OK",
       }).then(() => {
-        navigate("/homepage"); 
+        navigate("/homepage");
       });
     } catch (err) {
       // Handle errors here
       const errorMessage = err.message;
       const errorCode = err.code;
-  
+
       setError(true);
-  
+
       switch (errorCode) {
         case "auth/weak-password":
           setErrorMessage("The password is too weak.");
@@ -99,12 +99,12 @@ const SignUpPage = () => {
 
   return (
     <div className="flex h-screen bg-[#F3EBE5]">
-      <div className="w-1/2 p-12 m-12">
-        <div className="flex flex-col items-center">
+      <div className="w-1/2 p-12 m-12 ">
+        <div className="flex flex-col items-center mt-20">
           <h1 className="text-3xl font-bold mb-6">Sign up to TeloSoma today</h1>
         </div>
-        <div className="flex justify-center h-screen">
-          <form className="p-6 rounded-md" onSubmit={handleSubmit}>
+        <div className="flex justify-center  ">
+          <form className="p-6 rounded-md " onSubmit={handleSubmit}>
             <div className="mb-4">
               <label
                 htmlFor="userName"
@@ -178,13 +178,12 @@ const SignUpPage = () => {
         {features.map((feature, index) => (
           <div
             key={feature}
-            className={`text-3xl font-bold absolute transition-all duration-500 ease-in-out ${
-              index === activeIndex
-                ? "opacity-100 translate-y-0 text-black text-5xl"
-                : index < activeIndex
+            className={`text-3xl font-bold absolute transition-all duration-500 ease-in-out ${index === activeIndex
+              ? "opacity-100 translate-y-0 text-black text-5xl"
+              : index < activeIndex
                 ? "opacity-70 -translate-y-full text-gray-200"
                 : "opacity-70 translate-y-full text-gray-200"
-            }`}
+              }`}
             style={{
               transitionDelay: `${Math.abs(index - activeIndex) * 0.1}s`,
               transform: `translateY(${(index - activeIndex) * 100}%)`,
